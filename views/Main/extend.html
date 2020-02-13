@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="../../css/swiper.min.css">
+	<script src="../../js/swiper.js"></script>
+	<link rel="stylesheet" href="../../css/common.css">
+	<link rel="stylesheet" href="../../css/main/extend.css">
+	<script type="text/javascript" src="../../js/NativeShare.js"></script>
+	<script src="../../js/jquery-1.9.1.min.js"></script>
+	<script src="../../js/rem.js"></script>
+	<title>发展商户</title>
+</head>
+
+<body>
+	<div class="title">
+		<img src="../../imgs/my/left.png" alt="">
+		<h2>发展商户</h2>
+	</div>
+	<div class="img_focus">
+		<canvas id="img" width="630px" height="924px"></canvas>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img class="tulip1" src="../../imgs/main/1537542868388.jpg" alt="">
+					<img class="erweima tulip" src="../../imgs/main/erweima.png" alt="" srcset="">
+				</div>
+				<div class="swiper-slide">
+					<img class="tulip1" src="../../imgs/main/1537542872424.jpg" alt="">
+					<img class="erweima tulip" src="../../imgs/main/erweima.png" alt="" srcset="">
+				</div>
+				<div class="swiper-slide">
+					<img class="tulip1" src="../../imgs/main/extend_img.png" alt="">
+					<img class="erweima tulip" src="../../imgs/main/erweima.png" alt="" srcset="">
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="btn">
+		<div>
+			<a href="JavaScript:void(0)" onclick="save()">立即分享</a>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	var mySwiper = new Swiper('.swiper-container', {
+		currentindex: 0,
+		slidesPerView: 'auto',
+		autoplay: false,
+		loop: true, // 循环模式选项
+		centeredSlides: true,
+		spaceBetween: 0,
+		on: {
+			touchMove: function (event) {
+				var currentindex = mySwiper.realIndex
+				console.log(currentindex)
+			}
+		}
+	})
+	$('#img').css('display', 'none')
+	function save() {
+		var can = document.getElementById('img');
+		var ctx = can.getContext("2d");
+		var img = document.getElementsByClassName("tulip")[0];
+		var img1 = document.getElementsByClassName("tulip1")[mySwiper.realIndex];
+		ctx.drawImage(img1, 0, 0, 630, 924);
+		ctx.drawImage(img, 150, 515, 300, 300);
+		var a = document.createElement("a");
+		a.href = can.toDataURL();
+		a.download = 'hechengtupian.png';
+		a.click();
+	}
+</script>
+
+</html>

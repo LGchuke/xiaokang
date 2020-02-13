@@ -1,0 +1,94 @@
+.title {
+  height: .44rem;
+  background-color: #ffffff;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 999;
+}
+
+.title img {
+  width: .09rem;
+  height: .17rem;
+  margin: .18rem 0rem .14rem .15rem;
+  color: #333333;
+  position: absolute;
+}
+
+.title h2 {
+  font-family: PingFang-SC-Bold;
+  font-size: .18rem;
+  color: #333333;
+  line-height: 0.44rem;
+  text-align: center;
+}
+
+.img_focus {
+  margin-top: 0.64rem;
+  height: 4.52rem;
+  overflow: hidden;
+  border-radius: 0.1rem;
+}
+
+.img_focus .swiper-slide {
+  width: 3.15rem;
+  height: 4.52rem;
+  border-radius: 0.1rem;
+  overflow: hidden;
+  transition: 300ms;
+  transform: scale(0.9);
+}
+.img_focus .swiper-slide .erweima {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  top: 2.66rem;
+  left: .85rem;
+  z-index: 2;
+}
+
+.img_focus .swiper-slide-active, .img_focus .swiper-slide-duplicate-active {
+  transform: scale(1);
+}
+
+.img_focus .swiper-slide img {
+  width: 100%;
+}
+
+.btn {
+  width: 3.45rem;
+  height: .44rem;
+  margin: .80rem .15rem;
+  display: flex;
+  justify-content: center;
+  background-color: #185fff;
+  box-shadow: 0rem .05rem .10rem 0rem rgba(24, 95, 255, 0.35);
+  border-radius: .22rem;
+}
+
+.btn a {
+  height: .15rem;
+  font-family: PingFang-SC-Medium;
+  font-size: .16rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: .45rem;
+  letter-spacing: 0rem;
+  color: #ffffff;
+}
+
+@font-face {
+  font-family: 'PingFang-SC-Medium';
+  src: url('../../fonts/PingFang\ Medium.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: 'PingFang-SC-Bold';
+  src: url('../../fonts/苹方\ 粗体.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: 'DIN-Medium';
+  src: url('../../fonts/DIN-Medium.otf')
+}
